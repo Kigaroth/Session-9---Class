@@ -9,11 +9,24 @@ void readFromFile();
 
 int main()
 {
+    readFromFile();
     std::cout << "Hello World!\n";
 }
 
 void readFromFile() {
 
-    std::fstream File("story1.txt", std::ios::in)
+    std::fstream File("story1.txt", std::ios::in);
+
+    //if file exist and it's open
+    if (File) {
+        perror("File exist");
+    }
+
+    else {
+        // if file doesn't exist or there was a problem with opening it.
+        perror("Read from file ");
+    }
+
+    std::
 
 }
